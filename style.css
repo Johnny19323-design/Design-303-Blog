@@ -548,3 +548,215 @@ position: static;
 .process-flow span:last-child::after {
   content: "";
 }
+
+.resource-single {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  width: 100%;
+}
+
+.resource-card-large {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.85);
+  padding: 40px;
+  border-radius: 30px;
+  text-align: center;
+  box-shadow: 0 20px 50px rgba(33, 72, 43, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.resource-card-large:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 30px 70px rgba(33, 72, 43, 0.2);
+}
+
+.resource-card-large h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #17351f;
+}
+
+.resource-card-large p {
+  color: #536a59;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.resource-button {
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 999px;
+  background: #1f6d38;
+  color: white;
+  font-weight: 600;
+  transition: 0.25s ease;
+}
+
+.resource-button:hover {
+  background: #2d8a4b;
+  transform: translateY(-2px);
+}
+
+
+.section-label {
+  color: #2d8a4b;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+.resource-card-large {
+  position: relative;
+  overflow: hidden;
+}
+
+.resource-card-large::before {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: rgba(93, 190, 112, 0.15);
+  border-radius: 50%;
+  top: -80px;
+  right: -80px;
+  transition: transform 0.4s ease;
+}
+
+.resource-card-large:hover::before {
+  transform: scale(1.3);
+}
+
+.resource-card-large.horizontal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 220px;
+  padding: 50px;
+}
+
+.resource-card-large,
+.resource-card-large.horizontal {
+  min-height: 320px;
+}
+
+
+
+
+
+.resource-page {
+  padding-top: 120px;
+}
+
+/* Hero 区 */
+.resource-hero {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 80px;
+}
+
+.resource-hero span {
+  color: #2d8a4b;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+}
+
+.resource-hero h1 {
+  font-size: 3rem;
+  margin: 15px 0;
+}
+
+.resource-hero p {
+  color: #536a59;
+}
+
+/* 每个 section */
+.resource-section {
+  margin-bottom: 80px;
+}
+
+/* 左侧标题结构 */
+.resource-section-heading {
+  margin-bottom: 30px;
+}
+
+.resource-section-heading span {
+  color: #2d8a4b;
+  font-weight: 700;
+}
+
+.resource-section-heading h2 {
+  margin: 8px 0;
+}
+
+.resource-section-heading p {
+  color: #536a59;
+}
+
+/* 卡片网格 */
+.resource-list-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+/* 两列版本 */
+.resource-list-grid.two-column {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* 卡片 */
+.resource-item-card {
+  background: rgba(255,255,255,0.85);
+  padding: 20px;
+  border-radius: 20px;
+  border: 1px solid rgba(42, 105, 58, 0.1);
+  transition: 0.25s ease;
+}
+
+.resource-item-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+.resource-item-card h3 {
+  margin-bottom: 10px;
+}
+
+.resource-item-card p {
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+}
+
+.resource-use {
+  color: #2d8a4b;
+  font-weight: 500;
+}
+
+.resource-item-card a {
+  display: inline-block;
+  margin-top: 10px;
+  font-weight: 600;
+  color: #1f6d38;
+}
+
+/* APA 区 */
+.reference-box {
+  background: #f1f8f0;
+  padding: 25px;
+  border-radius: 20px;
+}
+
+/* 手机适配 */
+@media (max-width: 900px) {
+  .resource-list-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .resource-list-grid.two-column {
+    grid-template-columns: 1fr;
+  }
+}
